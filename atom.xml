@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Debuggify]]></title>
+  <link href="http://debuggify.github.com/atom.xml" rel="self"/>
+  <link href="http://debuggify.github.com/"/>
+  <updated>2012-08-07T01:04:49+05:30</updated>
+  <id>http://debuggify.github.com/</id>
+  <author>
+    <name><![CDATA[Ankur Agarwal]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
