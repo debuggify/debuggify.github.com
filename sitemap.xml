@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://debuggify.github.com/blog/2012/08/07/getting-started-with-debuggify/</loc>
+        <lastmod>2012-08-07T12:55:28+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://debuggify.github.com/about/</loc>
+        <lastmod>2012-08-07T14:53:52+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://debuggify.github.com/blog/archives/</loc>
-        <lastmod>2012-08-07T00:53:31+05:30</lastmod>
+        <lastmod>2012-08-07T12:55:28+05:30</lastmod>
     </url>
     <url>
         <loc>http://debuggify.github.com/</loc>
-        <lastmod>2012-08-07T00:53:31+05:30</lastmod>
+        <lastmod>2012-08-07T12:55:28+05:30</lastmod>
     </url>
 </urlset>

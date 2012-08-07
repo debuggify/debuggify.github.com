@@ -4,7 +4,7 @@
   <title><![CDATA[DEBUGGIFY]]></title>
   <link href="http://debuggify.github.com/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
-  <updated>2012-08-07T12:07:34+05:30</updated>
+  <updated>2012-08-07T14:55:46+05:30</updated>
   <id>http://debuggify.github.com/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getting started with Debuggify]]></title>
+    <link href="http://debuggify.github.com/blog/2012/08/07/getting-started-with-debuggify/"/>
+    <updated>2012-08-07T12:10:00+05:30</updated>
+    <id>http://debuggify.github.com/blog/2012/08/07/getting-started-with-debuggify</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
