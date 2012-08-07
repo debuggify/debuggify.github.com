@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Debuggify]]></title>
+  <title><![CDATA[DEBUGGIFY]]></title>
   <link href="http://debuggify.github.com/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
-  <updated>2012-08-07T11:43:20+05:30</updated>
+  <updated>2012-08-07T12:07:34+05:30</updated>
   <id>http://debuggify.github.com/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
