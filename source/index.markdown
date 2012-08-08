@@ -4,11 +4,11 @@ sharing: true
 footer: true
 ---
 
-## What is Debuggify ? ##
+## What is Debuggify? ##
 
 Its is a cloud based debugging service which enhances the modern web development experience.
 
-## How It Works ##
+## How It Works?##
 
 ![][architecture]
 
@@ -213,20 +213,6 @@ Send the logs to the browser console if it exist
     - `debuggify.logger.console.js` Logger component bundled with Console Transport
     - `debuggify.logger.console.global.js` Overload window.console with debuggify Logger object and transport console
     - `debuggify.allinone.js` All the stable components are bundle together
-
-### Contact Us ####
-
-**Email**: contact@debuggify.net
-
-**Mailing List**: debuggify@googlegroups.com
-
-**Twitter**: [@d3buggify]
-
-**IRC**:
-
-    Server: irc.freenode.net
-    Port: 6667
-    Rooms: #debuggify
 
 
   [nodejs]: http://nodejs.org/#download
