@@ -139,15 +139,6 @@
 
 <h2>Quick Start</h2>
 
-<h3>Setup Debuggify Javascript</h3>
-
-<p>Install via Bookmarklet code.</p>
-
-<pre><code>javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
-</code></pre>
-
-<p>Note: here are some more <a href="#bookma">bookmarkets</a></p>
-
 <h3>Setup Debuggify Server</h3>
 
 <p>Setup <a href="http://nodejs.org/#download">nodejs</a> if not already</p>
@@ -157,18 +148,32 @@
 <pre><code>$ curl http://npmjs.org/install.sh | sh
 </code></pre>
 
-<p>After npm is installed, run the following command</p>
+<p>Install Geoip dependencies and its npm</p>
 
 <pre><code>$ [sudo]  apt-get install libgeoip-dev  // Require for geoip
-$ [sudo] npm install debuggify -g
 </code></pre>
 
-<p>This will install debuggify <code>globally</code> so that it may be run from the command line. Now <code>run</code> the debuggify server</p>
+<p>After npm is installed, run the following command</p>
+
+<pre><code>$ [sudo] npm install debuggify -g
+</code></pre>
+
+<p>This will install debuggify <code>globally</code> so that it may be run from the command line.
+<strong>Note</strong>: Check for issues related to <a href="#geoip_setup">geoip</a> if faced during setup</p>
+
+<p>Now <code>run</code> the debuggify server to start server on port <code>9999</code></p>
 
 <pre><code>$ debuggify
 </code></pre>
 
-<p>This will run a server on default port <code>9999</code></p>
+<h3>Setup Debuggify Javascript</h3>
+
+<p>Install Bookmarklet by draging <a name="bookmarklet" href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())" alt="Drag Me to the bookmarket toolbar">AllinOne</a>  to the toolbar. If drag doesnot work, install using the code below</p>
+
+<pre><code>javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
+</code></pre>
+
+<p>Note: here are some more <a href="#bookmarklets">bookmarkets</a></p>
 
 <h3>Setup Debuggify Dashboard</h3>
 
@@ -225,7 +230,7 @@ project1_module1.warn('You better watch yourself');
 
 <p>Get logger object on demand</p>
 
-<pre><code>var project1 = debuggify.Logger.get('project1'); // Returns the logger object for project1
+<pre><code>var project1 = debuggify.Logger.get('project1'); // Returns the logger object` for project1
 project1.log('this is a log for project1');
 
 var project1_module1 = project1.get('module1'); // Returns the logger object for module1
@@ -329,6 +334,30 @@ This is very powerful can be used it to change configuration for particular modu
 </li>
 </ul>
 
+
+<p><a name="geoip_setup"></a></p>
+
+<h2>Geoip Setup</h2>
+
+<p>Check the documentation at <code>https://github.com/kuno/GeoIP</code> for geoip npm setup. If steps not available for your environment , use the following</p>
+
+<pre><code>wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP-1.4.7.tar.gz
+tar -xvzf GeoIP-1.4.7.tar.gz
+cd GeoIP-1.4.7
+./configure --prefix=/usr
+make
+sudo make install
+</code></pre>
+
+<p>if facing errors like</p>
+
+<pre><code>node: symbol lookup error: /usr/local/lib/node_modules/debuggify/node_modules/geoip/build/Release/geoip.node: undefined symbol: GeoIP_lib_version
+</code></pre>
+
+<p>Run</p>
+
+<pre><code>$ [sudo] ldconfig
+</code></pre>
 
   
     <footer>
