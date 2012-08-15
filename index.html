@@ -80,7 +80,7 @@
   
   <h2>What is Debuggify?</h2>
 
-<p>Its is a cloud based debugging service which enhances the modern web development experience.</p>
+<p>It is a cloud based debugging service which enhances the modern web development experience.</p>
 
 <h2>How It Works?</h2>
 
@@ -103,7 +103,7 @@
 
 <h2>Debuggify JS</h2>
 
-<p>A javascript library which provide advance debugging utilities with their predefined setting s for development, production and testing environments. These utilities can be of various types</p>
+<p>A javascript library which provide advance debugging utilities with their predefined settings for development, production and testing environments. These utilities can be of various types</p>
 
 <ul>
 <li>Standalone : No need to integrate with the code</li>
@@ -131,7 +131,7 @@
 
 <h2>Debuggify Dashboard</h2>
 
-<p> The debugging utilities can be controlled remotely from the dashboard. The dashboard in development environment shows the live from the browser client.Currently dashboard has limited features. In future we can have features which allow to control multiple browser client simultaneously.</p>
+<p> The debugging utilities can be controlled remotely from the dashboard. The dashboard in development environment shows the live from the browser client.Currently dashboard has limited features. In future we can have features which allows to control multiple browser client simultaneously.</p>
 
 <p><a name="installation"></a></p>
 
@@ -144,7 +144,7 @@
 <pre><code>javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
 </code></pre>
 
-<p>Note: here are some more <a href="#bookma">bookmarkets</a></p>
+<p>Note: here are some more <a href="#bookmarklets">bookmarklet</a></p>
 
 <h3>Setup Debuggify Server</h3>
 
@@ -155,8 +155,12 @@
 <pre><code>$ curl http://npmjs.org/install.sh | sh
 </code></pre>
 
-<p>After npm is installed, run the following command</p>
+<p>After npm is installed, you will need to install geoip module.</p>
 
+<pre><code>$ [sudo] npm install geoip -g
+</code></pre>
+
+<p>Now run the following command</p>
 <pre><code>$ [sudo] npm install debuggify -g
 </code></pre>
 
@@ -167,7 +171,7 @@
 
 <p>This will run a server on default port <code>9999</code></p>
 
-<p>Open http://dashboard.debuggify.net in browser. Go to any page and click on the bookmarket. Now open the browser console run commands</p>
+<p>Open <a>http://dashboard.debuggify.net/app/dashboard/index.html</a>http://dashboard.debuggify.net/app/dashboard/index.html in browser. Go to any page and click on the bookmarklet. Now open the browser console run commands</p>
 
 <pre><code>console.log('I love debugging')
 console.error('I hate bugs');
@@ -186,7 +190,7 @@ console.error('I hate bugs');
 <pre><code>var project1 = debuggify.Logger.create('project1');
 </code></pre>
 
-<p>You can also use the library with console</p>
+<p>You can also use the library with console by running the following line</p>
 
 <pre><code>var console =  debuggify.Logger('project1', options);
 </code></pre>
@@ -200,7 +204,7 @@ console.error('I hate bugs');
 
 <p>  If no environment is set, then the defaults are used.</p>
 
-<p><strong>NOTE</strong> User should make sure that <code>src/eviroments/&lt;enviroment Name&gt;.js</code>file has been include.</p>
+<p><strong>NOTE</strong>: User should make sure that <code>src/eviroments/&lt;enviroment Name&gt;.js</code>file has been include.</p>
 
 <p>Start using logger</p>
 
@@ -243,46 +247,46 @@ project1_module1_submodule1.log('this is a log for submodule1');
 project1_module1.setLevel(0); // Show all types messages for all the children on module module1
 </code></pre>
 
-<p><strong>NOTE</strong> Calling <code>.setLevel</code> on a logger will remove reinstall debugging methods for the new levels. This will also affect the behavior of all the children. For any module its nearest overridden parent level is used</p>
+<p><strong>NOTE</strong>: Calling <code>.setLevel</code> on a logger will remove reinstall debugging methods for the new levels. This will also affect the behavior of all the children. For any module its nearest overridden parent level is used</p>
 
 <p><a name="setFlag"></a>Set Flag for any message type (optional)</p>
 
 <pre><code>project1.setFlag('error', true); // Set the flag for
 </code></pre>
 
-<p><strong>NOTE</strong> Calling <code>.setFlag</code> on a logger will only affect the state of current object. Its children module will not be affected</p>
+<p><strong>NOTE</strong>: Calling <code>.setFlag</code> on a logger will only affect the state of current object. Its children module will not be affected</p>
 
 <p>Add a transport to a project</p>
 
 <pre><code>project1.addTransport('Console', {});
 </code></pre>
 
-<p><em>Control the parameter through URL</em> by enabline debug mode.Just add query string <code>project1__debug=true</code>.
-This is very powerful can be used it to change configuration for particular module.Ex.</p>
+<p><em>Control the parameter through URL</em> by enabling debug mode.Just add query string <code>project1__debug=true</code>.
+This is very powerful can be used it to change configuration for particular module. Ex.</p>
 
-<p>1.Change the environment.Following will change the environment to testing for project1 project.</p>
+<p>1.Change the environment. Following will change the environment to testing for project1 project.</p>
 
 <pre><code>urlString?project1__debug=true&amp;env=testing
 </code></pre>
 
-<p>2.To disable errors/logs/warnings for a particular module.Following will not throw warnings for module1 module for project1 project.</p>
+<p>2.To disable errors/logs/warnings for a particular module. Following will not throw warnings for module1 module for project1 project.</p>
 
 <pre><code>urlString?project1__debug=true&amp;project1__module1__info=false&amp;project1__module1__error=false
 </code></pre>
 
 <p><strong>NOTE</strong> The above is same as <a href="#setFlag">setFlag</a></p>
 
-<p>3.To show or hide properties.Following will not show timestamp property for module1 module for project1 project.</p>
+<p>3.To show or hide properties. Following will not show timestamp property for module1 module for project1 project.</p>
 
 <pre><code>urlString?project1__debug=true&amp;project1__module1__timestamp=false
 </code></pre>
 
-<p>Get the <em>logger object</em> by its name.Following will return the logger object for project1 if it is exists else it will create a new logger object with project1 name.If you do not want to create a new logger object pass the 2nd parameter as false</p>
+<p>Get the <em>logger object</em> by its name. Following will return the logger object for project1 if it is exists else it will create a new logger object with project1 name. If you do not want to create a new logger object pass the 2nd parameter as false</p>
 
 <pre><code>debuggify.Logger.get(project1,true)
 </code></pre>
 
-<p>Send message for specific type(logs,error,warning).Following will change the error message for module module1 to &#8220;This is an error message&#8221;.</p>
+<p>Send message for specific type (logs,error,warning).Following will change the error message for module module1 to &#8220;This is an error message&#8221;.</p>
 
 <pre><code>project1.message("This is an error message", module1, error)
 </code></pre>
