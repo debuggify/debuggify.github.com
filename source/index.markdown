@@ -71,6 +71,7 @@ Install npm
 
 After npm is installed, run the following command
 
+    $ [sudo]  apt-get install libgeoip-dev  // Require for geoip
     $ [sudo] npm install debuggify -g
 
 This will install debuggify `globally` so that it may be run from the command line. Now `run` the debuggify server
@@ -79,14 +80,14 @@ This will install debuggify `globally` so that it may be run from the command li
 
 This will run a server on default port `9999`
 
+### Setup Debuggify Dashboard ###
 
-Open http://dashboard.debuggify.net in browser. Go to any page and click on the bookmarket. Now open the browser console run commands
+Open `http://dashboard.debuggify.net/app/dashboard/index.html` in browser. Go to any page and click on the bookmarket. Now open the browser console run commands
 
     console.log('I love debugging')
     console.error('I hate bugs');
 
-The message will appear in the dashboard.
-
+If everything went right the messages will appear in the dashboard.
 
 ## Usage ##
 
