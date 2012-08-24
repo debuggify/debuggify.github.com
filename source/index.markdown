@@ -27,13 +27,13 @@ The [Debuggify Dashboard] is use to manage the different utilities remotely via 
 <a name="debuggify_js"></a>
 ## Debuggify JS ##
 
-A javascript library which provide advance debugging utilities with their predefined setting s for development, production and testing environments. These utilities can be of various types
+A javascript library which provide advance debugging utilities with their predefined settings for development, production and testing environments. These utilities can be of various types
 
   - Standalone : No need to integrate with the code
   - Partial Standalone: Can be integrated with code or controlled via code
   - Deeply Integrated: This type must be integrated to be used.
 
-Current the following utilities are provided
+Currently the following utilities are provided
 
   - logger: Provide advance module level logging support
   - collector: collect the data and send to the server
@@ -82,8 +82,8 @@ Now `run` the debuggify server to start server on port `9999`
 
 ### Setup Debuggify Javascript ###
 
-Install Bookmarklet by draging <a name="bookmarklet" href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())" alt="Drag Me to the bookmarket toolbar">AllinOne</a>  to the toolbar. If drag doesnot work, install using the code below
-    javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
+Install Bookmarklet by draging <a name="bookmarklet" href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())" alt="Drag Me to the bookmarket toolbar">AllinOne</a>  to the toolbar. If drag doesnot work, install using the code below
+    javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
 
 Note: here are some more [bookmarkets]
 
@@ -215,7 +215,7 @@ Send the logs to the browser console if it exist
   - Create a new bookmark on the browser toolbar
   - Copy the code below and paste the it in the URL field
 
-        javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
+        javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
 
   - For other scripts change the name of the script in the src
     - `debuggify.logger.console.js` Logger component bundled with Console Transport
@@ -262,6 +262,6 @@ Run
   [requirejs]: https://github.com/jrburke/requirejs
   [architecture]: http://cdn.debuggify.net/images/architecture.png "Architecture"
   [setFlag]:#setFlag
-  [logger.console.global]: javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
+  [logger.console.global]: javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
 
 
