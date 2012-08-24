@@ -56,7 +56,7 @@ Current the following utilities are provided
 
 Install via Bookmarklet code.
 
-    javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
+    javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
 
 Note: here are some more [bookmarkets]
 
@@ -206,7 +206,7 @@ Send the logs to the browser console if it exist
   - Create a new bookmark on the browser toolbar
   - Copy the code below and paste the it in the URL field
 
-        javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
+        javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
 
   - For other scripts change the name of the script in the src
     - `debuggify.logger.console.js` Logger component bundled with Console Transport
@@ -232,6 +232,6 @@ Send the logs to the browser console if it exist
   [requirejs]: https://github.com/jrburke/requirejs
   [architecture]: http://cdn.debuggify.net/images/architecture.png "Architecture"
   [setFlag]:#setFlag
-  [logger.console.global]: javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/js/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
+  [logger.console.global]: javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
 
 
