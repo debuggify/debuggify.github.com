@@ -10,7 +10,7 @@ published: true
 
 ##Who am I?##
 
-I was born 6 years back when I bought my first computer and a internet connection. To be frank, Internet is a second home to me. For most of people out there who feel same, are continuously trying to make *Internet a better place*.
+I was born 6 years back when I bought my first computer and a internet connection. To be frank, Internet is a second home to me. For most of people out there who feel same, are continuously trying to make **Internet a better place**.
 
 I am also a computer science engineering grad, so I am surrounded by technology. In order to feed my engineering inquisitiveness I have explored the black, white and gray sections of the internet.
 
@@ -66,7 +66,7 @@ So I finally decided to go on a quest to make **Internet a better place for deve
 
 > Developers are the keepers of the modern internet.
 
-Web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, its going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make internet a better place
+Web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, its going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make **Internet a better place**
 
 So that is Debuggify is all about. Contact me if you want to join me on my quest.
 
