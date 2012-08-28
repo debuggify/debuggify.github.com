@@ -4,7 +4,7 @@
   <title><![CDATA[DEBUGGIFY]]></title>
   <link href="http://debuggify.github.com/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
-  <updated>2012-08-28T16:41:44+05:30</updated>
+  <updated>2012-08-28T16:43:56+05:30</updated>
   <id>http://debuggify.github.com/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
@@ -20,7 +20,7 @@
     <id>http://debuggify.github.com/blog/2012/08/07/why-debuggify</id>
     <content type="html"><![CDATA[<h2>Who am I?</h2>
 
-<p>I was born 6 years back when I bought my first computer and a internet connection. To be frank, Internet is a second home to me. For most of people out there who feel same, are continuously trying to make <em>Internet a better place</em>.</p>
+<p>I was born 6 years back when I bought my first computer and a internet connection. To be frank, Internet is a second home to me. For most of people out there who feel same, are continuously trying to make <strong>Internet a better place</strong>.</p>
 
 <p>I am also a computer science engineering grad, so I am surrounded by technology. In order to feed my engineering inquisitiveness I have explored the black, white and gray sections of the internet.</p>
 
@@ -83,7 +83,7 @@
 
 <blockquote><p>Developers are the keepers of the modern internet.</p></blockquote>
 
-<p>Web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, its going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make internet a better place</p>
+<p>Web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, its going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make <strong>Internet a better place</strong></p>
 
 <p>So that is Debuggify is all about. Contact me if you want to join me on my quest.</p>
 ]]></content>
