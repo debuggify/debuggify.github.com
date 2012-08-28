@@ -24,3 +24,10 @@ With HTML5, CSS3, & ES6 the browsers are upgrading continuously. There is big di
 Due to high dependency on third party and bleeding edge browser environment, makes web application development even more complex process.
 
 We are dedicated to build easy to use tools and technologies which helps developers not only build great and robust applications but also boost their productivity.
+
+### Team ###
+
+Ankur Agarwal: [Twitter] | [Github]
+
+[Twitter]: https://twitter.com/Agarwal_Ankur
+[Github]: https://github.com/debuggify
