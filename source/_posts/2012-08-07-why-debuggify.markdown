@@ -16,7 +16,7 @@ I am also a computer science engineering grad, so I am surrounded by technology.
 
 ##Where it all started?##
 
-I am full stack web developer by profession and have authored / coauthored many 3rd party social plugins for [Shareaholic Inc] which runs on thousands of different blogs and websites driving 1+ billion pageviews per month. These plugins can be installed on different CMS/blogging platform like Wordpress, Drupal, Tumblr, Blogger etc. While working on these plugins I closely interact with the different elements of the modern internet ecosystem.
+I am a full stack web developer by profession and have authored / co-authored many 3rd party social plugins for [Shareaholic Inc] which runs on thousands of different blogs and websites driving 1+ billion pageviews per month. These plugins can be installed on different CMS/blogging platform like Wordpress, Drupal, Tumblr, Blogger etc. While working on these plugins I closely interact with the different elements of the modern internet ecosystem.
 
 
 ##What's my use case of 3rd party plugin ?##
@@ -28,16 +28,16 @@ Elaborating the above quote
   - As plugins runs on 3rd party websites, it has to be robust so it `doesn't break` itself and neither the website
   - It has to be fast enough to deliver `good page load time`
   - It should `not conflict` with other existing plugins
-  - It should `support majour browser vendors` including internet explorer
-  - It should also `support legacy browser versions` like ie6 ie7 etc
-  - As plugins interact with over 200+ 3rd party apis, it hard to keep track when something break
+  - It should `support major browser vendors` including internet explorer
+  - It should also `support legacy browser versions` like ie6 ie7 etc.
+  - As plugins interact with over 200+ 3rd party apis, it's hard to keep track when something break
   - It should be easy to setup with multiple cms/blogging environments for better distribution
 
 ##Technical challenges faced ?##
 
-  - In 3rd party environment, developers have limited or no control over things, so its hard to debug and reproduce bugs / issues
+  - In 3rd party environment, developers have limited or no control over things, so it's hard to debug and reproduce bugs / issues
   - If some plugin feature is not working its hard to know whether
-    - its not working for a particular website,
+    - it's not working for a particular website,
     - or not working for a set of URLs
     - or for a particular CMS/Blogging environment
     - or for a particular screen resolution
@@ -56,7 +56,7 @@ As all wise developers know
 >  Zero Bugs is a Myth
 
 
-I have talked to few friends about the problems. All are encountering similar set of problems on the daily basic. A majority their development time is spend in debugging and fixing bugs. The debugging is also becoming hard due to the evolving nature of the web.
+I have talked to a few friends about the problems. All are encountering similar set of problems on the daily basic. A majority their development time is spend in debugging and fixing bugs. The debugging is also becoming hard due to the evolving nature of the web.
 
 ##What to do about it?##
 
@@ -66,7 +66,7 @@ So I finally decided to go on a quest to make **Internet a better place for deve
 
 > Developers are the keepers of the modern internet.
 
-Web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, its going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make **Internet a better place**
+The web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, it's going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make **Internet a better place**
 
 So that is Debuggify is all about. Contact me if you want to join me on my quest.
 
