@@ -59,6 +59,10 @@ task :generate do
   system "rm -Rf public/docs"
   system "cp -r vendor/debuggify_js/docs public/docs/"
   # system "rm -Rf public/docs/output"
+
+  # Update favicon
+  system "rm  public/docs/favicon.ico"
+  system "cp public/favicon.ico  public/docs/favicon.ico"
 end
 
 desc "Watch the site and regenerate when it changes"
