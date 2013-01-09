@@ -54,6 +54,11 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+
+  # Adding duckjs resources
+  system "rm -Rf public/docs"
+  system "cp -r vendor/debuggify_js/docs public/docs/"
+  # system "rm -Rf public/docs/output"
 end
 
 desc "Watch the site and regenerate when it changes"
