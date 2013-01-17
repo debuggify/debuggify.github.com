@@ -1,11 +1,12 @@
-#Getting Started
+# Basic Setup
 
-Setup in 4 simple steps
+Setup in few simple steps
 
   - [Signup] for a account if not already and verify the email address
   - Then [login] to debuggify
   - Create an application
-  - Get the code  and paste it on you website
+  - Get the code and paste it on you website.
+  - Deploy the code to your production servers
 
 Hurray! You have completed you setup. Now its time for a meditation.
 
