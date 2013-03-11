@@ -9,13 +9,10 @@ Setup in few simple steps
   - Then [login] to debuggify, Create an application and get a apikey
   - Put the Apikey and click Save Changes
 
-
-
   {@img icon.png Wordpress}
 
-  [Signup]: https://www.debuggify.net/organizations/status
-  [WordPress Plugin Directory]: http://wordpress.org/extend/plugins/
+  [WordPress Plugin Directory]: http://wordpress.org/extend/plugins/debuggify
   [Github]: https://nodeload.github.com/debuggify/debuggify_wordpress/zip/master
   [here]: http://urbangiraffe.com/articles/how-to-install-a-wordpress-plugin/
-  [login]: https://www.debuggify.net/organizations/sign_in
+  [login]: https://www.debuggify.net/login
 
