@@ -9,7 +9,7 @@
   <meta name="author" content="Debuggify">
 
   
-  <meta name="description" content="What is Debuggify? Its is a cloud based debugging service which enhances the modern web development experience. How It Works? It contains a multi- &hellip;">
+  <meta name="description" content="What is Debuggify ? Debuggify is all about powering developers with best tools / utilities which help them debug their web applications in &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -46,10 +46,12 @@
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">DEBUGGIFY</a></h1>
+  <header role="banner"><hgroup style="height: 55px">
+  <!-- <h1><a href="/">DEBUGGIFY</a></h1> -->
+  <h1><a href="/"><img src="/images/icons/debuggify-logo.png" style=""></a></h1>
+
   
-    <h2>Debug the web</h2>
+    <!-- <h2>Debug the web</h2> -->
   
 </hgroup>
 
@@ -70,7 +72,7 @@
   <li><a href="/">Home</a></li>
   <li><a href="/blog">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/docs">Documentation</a></li>
+  <li><a href="/docs/">Documentation</a></li>
   <!-- <li><a href="/examples">Examples</a></li> -->
   <li><a href="/about">About</a></li>
 </ul>
@@ -80,284 +82,15 @@
       <div>
 <article role="article">
   
-  <h2>What is Debuggify?</h2>
+  <h2>What is Debuggify ?</h2>
 
-<p>Its is a cloud based debugging service which enhances the modern web development experience.</p>
+<p>Debuggify is all about powering developers with best tools / utilities which help them debug their web applications in production environment.</p>
 
-<h2>How It Works?</h2>
+<h2>How It Works</h2>
 
-<p><img src="http://cdn.debuggify.net/images/architecture.png" title="Architecture" alt="" /></p>
+<p><img src="/images/introduction/icon.png" title="How it works" ></p>
 
-<p>It contains a multi-tiered architecture, consisting of:</p>
-
-<ul>
-<li><a href="#debuggify_js">Debuggify JS</a></li>
-<li><a href="#debuggify_server">Debuggify Server</a></li>
-<li><a href="#debuggify_dashboard">Debuggify Dashboard</a></li>
-</ul>
-
-
-<p>Basically it consists of javascript library [debuggify_js] which need to be included along with the code. This library provide utilities like <code>logger</code>, <code>collector</code>. This utilities can be controlled remotely over different transports like (<code>websockets</code>, <code>http</code> etc).</p>
-
-<p>The <a href="#debuggify_dashboard">Debuggify Dashboard</a> is use to manage the different utilities remotely via <a href="#debuggify_server">Debuggify Server</a></p>
-
-<p><a name="debuggify_js"></a></p>
-
-<h2>Debuggify JS</h2>
-
-<p>A javascript library which provide advance debugging utilities with their predefined settings for development, production and testing environments. These utilities can be of various types</p>
-
-<ul>
-<li>Standalone : No need to integrate with the code</li>
-<li>Partial Standalone: Can be integrated with code or controlled via code</li>
-<li>Deeply Integrated: This type must be integrated to be used.</li>
-</ul>
-
-
-<p>Currently the following utilities are provided</p>
-
-<ul>
-<li>logger: Provide advance module level logging support</li>
-<li>collector: collect the data and send to the server</li>
-<li>transports: Communication layer to communicate with the server</li>
-</ul>
-
-
-<p><a name="debuggify_server"></a></p>
-
-<h2>Debuggify Server</h2>
-
-<p> A nodejs based server to make communication possible between browser client and dashboard. Both the browser client and dashboard connect the server and pass the message to each other</p>
-
-<p><a name="debuggify_dashboard"></a></p>
-
-<h2>Debuggify Dashboard</h2>
-
-<p> The debugging utilities can be controlled remotely from the dashboard. The dashboard in development environment shows the live from the browser client.Currently dashboard has limited features. In future we can have features which allow to control multiple browser client simultaneously.</p>
-
-<p><a name="installation"></a></p>
-
-<h2>Quick Start</h2>
-
-<h3>Setup Debuggify Server</h3>
-
-<p>Setup <a href="http://nodejs.org/#download">nodejs</a> if not already</p>
-
-<p>Install npm</p>
-
-<pre><code>$ curl http://npmjs.org/install.sh | sh
-</code></pre>
-
-<p>Install Geoip dependencies and its npm</p>
-
-<pre><code>$ [sudo]  apt-get install libgeoip-dev  // Require for geoip
-</code></pre>
-
-<p>After npm is installed, run the following command</p>
-
-<pre><code>$ [sudo] npm install debuggify -g
-</code></pre>
-
-<p>This will install debuggify <code>globally</code> so that it may be run from the command line.
-<strong>Note</strong>: Check for issues related to <a href="#geoip_setup">geoip</a> if faced during setup</p>
-
-<p>Now <code>run</code> the debuggify server to start server on port <code>9999</code></p>
-
-<pre><code>$ debuggify
-</code></pre>
-
-<h3>Setup Debuggify Javascript</h3>
-
-<p>Install Bookmarklet by draging <a name="bookmarklet" href="javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())" alt="Drag Me to the bookmarket toolbar">AllinOne</a>  to the toolbar. If drag doesnot work, install using the code below</p>
-
-<pre><code>javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.allinone.js?r='+Math.random()*99999999);document.body.appendChild(e)})())
-</code></pre>
-
-<p>Note: here are some more <a href="#bookmarklets">bookmarkets</a></p>
-
-<h3>Setup Debuggify Dashboard</h3>
-
-<p>Open <code>http://dashboard.debuggify.net/app/dashboard/index.html</code> in browser. Go to any page and click on the bookmarket. Now open the browser console run commands</p>
-
-<pre><code>console.log('I love debugging')
-console.error('I hate bugs');
-</code></pre>
-
-<p>If everything went right the messages will appear in the dashboard.</p>
-
-<h2>Usage</h2>
-
-<p><a name="logger"></a></p>
-
-<h3>Logger</h3>
-
-<p>Create a logger object</p>
-
-<pre><code>var project1 = debuggify.Logger.create('project1');
-</code></pre>
-
-<p>You can also use the library with console</p>
-
-<pre><code>var console =  debuggify.Logger('project1', options);
-</code></pre>
-
-<p><strong>NOTE</strong>: The above line will replace the global console(windows.console) if local console variable is not found, so be careful while using it.</p>
-
-<p>Set Development Environment (optional)</p>
-
-<pre><code>project1.setEnv('development');
-</code></pre>
-
-<p>  If no environment is set, then the defaults are used.</p>
-
-<p><strong>NOTE</strong> User should make sure that <code>src/eviroments/&lt;enviroment Name&gt;.js</code>file has been include.</p>
-
-<p>Start using logger</p>
-
-<pre><code>project1.log('some crappy information');
-project1.error('Shit! something breaks');
-project1.warn('You better watch yourself');
-</code></pre>
-
-<p>Add module specific logger to the project</p>
-
-<pre><code>var project1_module1 = project1.addModule('module1');
-
-project1_module1.log('some crappy information');
-project1_module1.error('Shit! something breaks');
-project1_module1.warn('You better watch yourself');
-</code></pre>
-
-<p>Get logger object on demand</p>
-
-<pre><code>var project1 = debuggify.Logger.get('project1'); // Returns the logger object` for project1
-project1.log('this is a log for project1');
-
-var project1_module1 = project1.get('module1'); // Returns the logger object for module1
-project1_module1.log('this is a log for module1');
-
-// OR
-var project1_module1 = debuggify.Logger.get('project1').get('module1'); // Directly get the module logger object
-project1_module1.log('this is a log for module1');
-</code></pre>
-
-<p>Modules Hierarchy</p>
-
-<pre><code>var project1_module1_submodule1 = debuggify.Logger.get('project1').get('module1'),get('submodule1');
-project1_module1_submodule1.log('this is a log for submodule1');
-</code></pre>
-
-<p>Set Logging Level (optional). Every environment has it logging level already set</p>
-
-<pre><code>project1.setLevel(2); // Set warning and errors only for project on project project1
-project1_module1.setLevel(0); // Show all types messages for all the children on module module1
-</code></pre>
-
-<p><strong>NOTE</strong> Calling <code>.setLevel</code> on a logger will remove reinstall debugging methods for the new levels. This will also affect the behavior of all the children. For any module its nearest overridden parent level is used</p>
-
-<p><a name="setFlag"></a>Set Flag for any message type (optional)</p>
-
-<pre><code>project1.setFlag('error', true); // Set the flag for
-</code></pre>
-
-<p><strong>NOTE</strong> Calling <code>.setFlag</code> on a logger will only affect the state of current object. Its children module will not be affected</p>
-
-<p>Add a transport to a project</p>
-
-<pre><code>project1.addTransport('Console', {});
-</code></pre>
-
-<p><em>Control the parameter through URL</em> by enabline debug mode.Just add query string <code>project1__debug=true</code>.
-This is very powerful can be used it to change configuration for particular module.Ex.</p>
-
-<p>1.Change the environment.Following will change the environment to testing for project1 project.</p>
-
-<pre><code>urlString?project1__debug=true&amp;env=testing
-</code></pre>
-
-<p>2.To disable errors/logs/warnings for a particular module.Following will not throw warnings for module1 module for project1 project.</p>
-
-<pre><code>urlString?project1__debug=true&amp;project1__module1__info=false&amp;project1__module1__error=false
-</code></pre>
-
-<p><strong>NOTE</strong> The above is same as <a href="#setFlag">setFlag</a></p>
-
-<p>3.To show or hide properties.Following will not show timestamp property for module1 module for project1 project.</p>
-
-<pre><code>urlString?project1__debug=true&amp;project1__module1__timestamp=false
-</code></pre>
-
-<p>Get the <em>logger object</em> by its name.Following will return the logger object for project1 if it is exists else it will create a new logger object with project1 name.If you do not want to create a new logger object pass the 2nd parameter as false</p>
-
-<pre><code>debuggify.Logger.get(project1,true)
-</code></pre>
-
-<p>Send message for specific type(logs,error,warning).Following will change the error message for module module1 to &#8220;This is an error message&#8221;.</p>
-
-<pre><code>project1.message("This is an error message", module1, error)
-</code></pre>
-
-<p><a name="transport"></a></p>
-
-<h3>Collector</h3>
-
-<p>This component is responsible for collecting the logging messages from the global object and send it to various transports medium. The collector is independent of logger so it can be loaded on demand.</p>
-
-<p><a name="transport"></a></p>
-
-<h3>Transports</h3>
-
-<h4>Console</h4>
-
-<p>Send the logs to the browser console if it exist</p>
-
-<pre><code>project1.add('Console', options)
-</code></pre>
-
-<p><a name="bookmarklets"></a></p>
-
-<h2>Bookmarklets</h2>
-
-<ul>
-<li>Create a new bookmark on the browser toolbar</li>
-<li><p>Copy the code below and paste the it in the URL field</p>
-
-<pre><code>javascript:void((function(){var%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://cdn.debuggify.net/latest/debuggify.logger.console.global.js?r='+Math.random()*99999999);document.body.appendChild(e)})()) "Drag me to the toolbar"
-</code></pre></li>
-<li><p>For other scripts change the name of the script in the src</p>
-
-<ul>
-<li><code>debuggify.logger.console.js</code> Logger component bundled with Console Transport</li>
-<li><code>debuggify.logger.console.global.js</code> Overload window.console with debuggify Logger object and transport console</li>
-<li><code>debuggify.allinone.js</code> All the stable components are bundle together</li>
-</ul>
-</li>
-</ul>
-
-
-<p><a name="geoip_setup"></a></p>
-
-<h2>Geoip Setup</h2>
-
-<p>Check the documentation at <code>https://github.com/kuno/GeoIP</code> for geoip npm setup. If steps not available for your environment , use the following</p>
-
-<pre><code>wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP-1.4.7.tar.gz
-tar -xvzf GeoIP-1.4.7.tar.gz
-cd GeoIP-1.4.7
-./configure --prefix=/usr
-make
-sudo make install
-</code></pre>
-
-<p>if facing errors like</p>
-
-<pre><code>node: symbol lookup error: /usr/local/lib/node_modules/debuggify/node_modules/geoip/build/Release/geoip.node: undefined symbol: GeoIP_lib_version
-</code></pre>
-
-<p>Run</p>
-
-<pre><code>$ [sudo] ldconfig
-</code></pre>
+<p>We provide libraries for different platform which can be easily integrated in your website code and these libraries collect various datapoints along logs, errors, exceptions and send it to debuggify. We use this collected data to help developers debug their code more easily.</p>
 
   
     <footer>
