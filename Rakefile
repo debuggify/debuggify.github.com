@@ -61,8 +61,12 @@ task :generate do
   # system "rm -Rf public/docs/output"
 
   # Update favicon
-  system "rm  public/docs/favicon.ico"
+  system "rm  public/docs/favicon.ico public/docs/resources/images/logo.png"
   system "cp public/favicon.ico  public/docs/favicon.ico"
+  system "cp public/favicon.png  public/docs/resources/images/logo.png"
+
+
+
 end
 
 desc "Watch the site and regenerate when it changes"
