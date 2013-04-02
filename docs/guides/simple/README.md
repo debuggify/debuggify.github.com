@@ -21,6 +21,41 @@ Let start by creating a logger for whole project
     project1.error('Oops! something breaks');
 
 
+## Managing Messages Levels
+
+There are following level available
+
+  -  TRACE: 0
+  -  INFO: 1
+  -  WARN: 2
+  -  ERROR: 3
+  -  SILENT: 4
+
+
+### Update single level
+
+To turning off warn messages
+
+    // All warn messages will be ignored after this.
+    project1.setFlag('warn', true);
+
+Similarly to re-enable warn messages
+
+    // All warn messages will no longer be ignored.
+    project1.setFlag('warn', false);
+
+This works same for other events.
+
+### Update multiple levels
+
+To select any level
+
+    // This will collect message >= WARN
+    project1.setLevel(2);
+
+Calling `setLevel` on a logger will remove all of the previous helper methods for the old levels and define helper methods for the new levels.
+
+
 ## Custom Events
 
 Apart from the general log warn error, you can even create custom events to keep track of whats going on.
