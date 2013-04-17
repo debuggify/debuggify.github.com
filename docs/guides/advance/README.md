@@ -35,30 +35,81 @@ First create a logger object
 This will **wrap multiple** functions at once.
 
 
-    var bar= {
+First create a human object
 
-      p1: true,
-      p2: 100,
 
-      foo1 : function() {
-        throw new Error("Something went wrong 1");
+    var Human = {
+
+      name: "Anonmous",
+
+      eyes: {
+        see : function() {
+          throw new Error("Something went wrong while seeing");
+        },
+
+        blink : function() {
+          throw new Error("Something went wrong while blinking");
+        },
+      },
+
+      talk : function() {
+        throw new Error("Something went wrong while talking");
+      },
+
+      run: function() {
+        throw new Error("Something went wrong while running");
+      },
+
+      walk : function() {
+        throw new Error("Something went wrong while walking");
       }
-
-      foo2 : function() {
-        throw new Error("Something went wrong 2");
-      }
+    };
 
 
-      foo3 : function() {
-        throw new Error("Something went wrong 2");
-      }
-    }
+Now, To automatic enable the error tracking inside the functions
 
-    // All methods of bar will be wrapped
-    project.track(bar);
 
-    // Only foo1 and foo2 will be wrapped
-    project.track(bar, ['foo1', 'foo2']);
+    // All the 1st level functions and their children functions will be wrapped
+    // talk run walk are wrapped
+    // see blink will not be wrapped
+    project.track(Human);
+
+    // Only walk and run will be wrapped
+    project.track(bar, ['walk', 'run']);
+
+    // To track children objects Human.eyes
+    // see blink will be wrapped
+    project.track(Human.eyes);
+
+
+So, now errors will be reported automatically
+
+    Human.walk();
+
+
+We often have to work with big objects which have multilevel of hierarchy of functions. So we need to track all the sub level functions.
+
+    // Lets extend the Human object
+
+    Human.talk.to = function(name) {
+      throw new Error("Something went wrong while talking  to " + name);
+    };
+
+    Human.talk.via = function(device) {
+      throw new Error("Something went wrong while talking  via " + device);
+    };
+
+    // The same will track errors for to and from.
+    // Need need to add extra tracking
+    project.track(Human);
+
+
+**NOTE**: This will only wrap the functions while are immediate children not the prototype chain functions
+
+
+To check whether a function is currently tracked or not
+
+    project.isTracked(Human.talk.to); // return true
 
 
 ### Using with Jquery
@@ -69,7 +120,8 @@ This will **wrap multiple** functions at once.
     // Only the mentioned functions will be wrapped
     project.track(jQuery, ['extend', 'trim', 'hasData', 'css' ]);
 
-    foo();
+
+For more details on debugging jQuery, see [frameworks section](#!/guide/frameworks)
 
 
 ### Disable Try-Catch wrapper
