@@ -1,3 +1,4 @@
 [submodule "vendor/debuggify_js"]
 	path = vendor/debuggify_js
-	url = git@github.com:debuggify/debuggify_js_dev.git
+	url = git@bitbucket.org:debuggify/debuggify_js.git
+
