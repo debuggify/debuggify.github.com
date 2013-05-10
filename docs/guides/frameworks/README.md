@@ -1,4 +1,6 @@
-# Debugging Frameworks
+# Tracking Frameworks
+
+Check out The [Track Api](#!/guide/advance-section-3) and [The Report Api ](#!/guide/advance-section-1)
 
 ## jQuery
 
@@ -8,20 +10,16 @@ The easy way to start with this is using
 
     // All methods of bar will be wrapped
     project.track(jQuery);
-
-This will installed a try-catch wrapper around all query apis and catch the exceptions.
-
-
-### Jquery Events
-
-To track events in jQuery is simple.
-
     project.track(jQuery.event);
 
-This will track all the events though apis like `.click`, `.trigger` etc
+First line install a try-catch wrapper around all query apis and will catch any raised exceptions.
+
+Second line will start tracking the jQuery events which are listened using apis like `.click`, `.trigger` etc.
 
 
 ### Jquery Ajax Helper
+
+This is small snipet to track jQuery ajax related errors.
 
     // A simple ajax helper to track ajax errors
     $(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
