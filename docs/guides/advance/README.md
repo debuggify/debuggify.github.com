@@ -200,13 +200,13 @@ This will restore the original functions. This will work only if the function is
 
 
 
-## Track Cross Domain Scripts
+## Track Cross Origin Scripts
 
-The are many different techniques to track cross domain scripts
+The are many different techniques to track cross origin scripts
 
 ### Fetch the javascript from the same origin as the current page.
 
-For your own code its easy to host it on the same domain or setup a proxy which fetches the cross domain scripts and serve them. This may not play well with third party scripts as they further load many other scripts.
+For your own code its easy to host it on the same domain or setup a proxy which fetches the cross origin scripts and serve them. This may not play well with third party scripts as they further load many other scripts.
 
 ### Wrap whole file inside try-catch
 
@@ -246,7 +246,7 @@ If the script is hosted on a different origin than the current page origin. Basi
 
 ### How to get actual error message
 
-Check [Track Cross Domain Scripts](#!/guide/advance-section-4)
+Check [Track Cross Origin Scripts](#!/guide/advance-section-4)
 
 
 

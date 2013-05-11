@@ -1,8 +1,8 @@
 # Frequently Asked Questions
 
-## Does it track errors in cross domain scripts.
+## Does it track errors in cross origin scripts.
 
-Check [Track Cross Domain Scripts](#!/guide/advance-section-4)
+Check [Track Cross Origin Scripts](#!/guide/advance-section-4)
 
 
 
@@ -27,7 +27,7 @@ So its hard to collect bulky informations like stacktraces, custom user informat
 Debuggify does much more than just tracking javascript exceptions through `window.onerror`.
 
 - provide apis to track custom exceptions though try catch
-- enables you to track errors for cross domain scripts
+- enables you to track errors for cross origin scripts
 - support minified code through source map
 - track the users so its easy to understand the impact of problem.
 - supports modular logging same as server side
