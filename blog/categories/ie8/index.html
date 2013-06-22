@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Window.onerror is not enough - DEBUGGIFY</title>
+  <title>Category: IE8 - DEBUGGIFY</title>
   <meta name="author" content="Debuggify">
 
   
-  <meta name="description" content="Scott Hanselman blogged about JavaScript the assembly language for the web. There a plenty of languages that compiles to javascript. With the &hellip;">
+  <meta name="description" content="Category: IE8">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/">
+  <link rel="canonical" href="http://debuggify.github.comblog/categories/ie8/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,108 +80,36 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Window.onerror Is Not Enough</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-26T13:18:00+05:30" pubdate data-updated="true">Nov 26<span>th</span>, 2012</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
+    <h1 class="entry-title">Category: IE8</h1>
     
   </header>
-
-
-<div class="entry-content"><p>Scott Hanselman blogged about <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx">JavaScript the assembly language for the web</a>. There a plenty of <a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">languages that compiles to javascript</a>. With the addition of Dart from Google and Typescript from Microsoft a war has broke out for better.</p>
-
-<p>With the rise of compiled to javascript languages it hard to traceback the errors to original source. Almost all modern provides the window.onerror api to catch all uncaught exceptions on a page. This api provides very limited information (error message, filename and line number only) which is the root cause of many problems.</p>
-
-<p>With modern web development practices the amount of javascript code per page is growing rapidly. Also this code is minified by the minification tools(like <a href="https://developers.google.com/closure/compiler/">Google Closure Compiler</a>,  <a href="https://github.com/mishoo/UglifyJS2">UglifyJS2</a> etc) to reduce the code size. After minification whole code ends in one single line. Here is where most problem starts. I am listing some really annoying issues related to window.onerror below</p>
-
-<ul>
-<li><p>Missing Char No: The char no is very important for the minified code to point at the exact statement as there is only one line in minified code. Even source maps cannot be helpful in tracking back to original line.</p></li>
-<li><p>No Call Stack: The call stack is completely hidden from the developer so its hard to identify the functions flow. However there is a trick to <a href="http://blog.errorception.com/2011/12/call-stacks-in-ie.html">extract stack in IE9</a> only.</p></li>
-<li><p>Cross Origin Errors: These types are thown when some cross origin permission is broken. They are very common on pages with facebook like and google plus widget installed. For such errors window.error message throw a single message &#8220;Script Error&#8221;. As per <a href="http://stackoverflow.com/questions/5913978/cryptic-script-error-reported-in-javascript-n-chrome-and-firefox/7778424#7778424">stackoverflow</a> post this behavior is intentional to avoid some security risks but its at expense of useful debugging information.</p></li>
-</ul>
-
-
-<p>Most of above mentioned problems are roadblock in debugging production websites / applications. There is a need for better tools and libraries for the job.</p>
-
-<p>I will soon be writing a post on <strong>Best Debugging Practices For Javascript In Production Environment</strong></p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Ankur Agarwal</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2013</h2>
+
+<article>
+  
+<h1><a href="/blog/2013/06/22/error-in-javascript-comments/">Error in Javascript Comments</a></h1>
+<time datetime="2013-06-22T08:12:00+05:30" pubdate><span class='month'>Jun</span> <span class='day'>22</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/ie6/'>IE6</a>, <a class='category' href='/blog/categories/ie7/'>IE7</a>, <a class='category' href='/blog/categories/ie8/'>IE8</a>, <a class='category' href='/blog/categories/ie9/'>IE9</a>, <a class='category' href='/blog/categories/comments/'>comments</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a></span>
+</footer>
 
 
-<time datetime="2012-11-26T13:18:00+05:30" pubdate data-updated="true">Nov 26<span>th</span>, 2012</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/" data-via="d3buggify" data-counturl="http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/08/07/why-debuggify/" title="Previous Post: Why Debuggify?">&laquo; Why Debuggify?</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/03/31/debug-javascript-in-production/" title="Next Post: Debug Javscript In Production">Debug Javscript In Production &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -294,10 +222,7 @@
       var disqus_shortname = 'debuggify';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/';
-        var disqus_url = 'http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -4,7 +4,7 @@
   <title><![CDATA[DEBUGGIFY]]></title>
   <link href="http://debuggify.github.com/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
-  <updated>2013-05-18T06:30:45+05:30</updated>
+  <updated>2013-06-22T08:25:54+05:30</updated>
   <id>http://debuggify.github.com/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Error in Javascript Comments]]></title>
+    <link href="http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments/"/>
+    <updated>2013-06-22T08:12:00+05:30</updated>
+    <id>http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments</id>
+    <content type="html"><![CDATA[<p>Last week, I was writing code in javascript  when I found something that completly blew off my mind. This is what I found</p>
+
+<p><img src="http://debuggify.github.com/images/posts/stupid_ie.png" alt="Stupid IE" /></p>
+
+<p>Yeah, IE thowing error in javascript comment. For some time I didnot believe what I am seeing, but gradually I came to my senses. Like most developers, first thing I did was started cursing IE on twitter, but later reality struct me and that is to find a solution to this mess.</p>
+
+<p>I dig in a lot of wrong places until I found <a href="http://en.wikipedia.org/wiki/Conditional_comment">conditional comments</a> in IE. A sample of how the conditional logic works is below</p>
+
+<pre><code>&lt;script&gt;
+/*@cc_on
+
+  @if (@_jscript_version == 10)
+    document.write("You are using IE10");
+
+  @elif (@_jscript_version == 9)
+    document.write("You are using IE9");
+
+  @elif (@_jscript_version == 5.8)
+    document.write("You are using IE8");
+
+  @elif (@_jscript_version == 5.7 &amp;&amp; window.XMLHttpRequest)
+    document.write("You are using IE7");
+
+  @elif (@_jscript_version == 5.6 || (@_jscript_version == 5.7 &amp;&amp; !window.XMLHttpRequest))
+    document.write("You are using IE6");
+
+  @elif (@_jscript_version == 5.5)
+    document.write("You are using IE5.5");
+
+  @else
+    document.write("You are using IE5 or older");
+
+  @end
+
+@*/
+&lt;/script&gt;
+</code></pre>
+
+<p>To fix this all I need to do is to remove the whole comment. This comment is anyways useful for sourcemaps supported browsers which is long way to go for IE.</p>
+
+<p>Anyways this is just a hack for the time being. The <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit">sourcemap specs</a> has been updated due to this problem. To know more check the <a href="https://github.com/mishoo/UglifyJS2/pull/213">uglifyjs issue on github</a></p>
+
+<p>Finally all I have to say is <code>God Bless IE Developers</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Debug Javscript In Production]]></title>

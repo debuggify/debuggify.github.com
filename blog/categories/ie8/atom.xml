@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: javascript | DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <title><![CDATA[Category: IE8 | DEBUGGIFY]]></title>
+  <link href="http://debuggify.github.com/blog/categories/ie8/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
   <updated>2013-06-22T08:25:54+05:30</updated>
   <id>http://debuggify.github.com/</id>
@@ -61,31 +61,6 @@
 <p>Anyways this is just a hack for the time being. The <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit">sourcemap specs</a> has been updated due to this problem. To know more check the <a href="https://github.com/mishoo/UglifyJS2/pull/213">uglifyjs issue on github</a></p>
 
 <p>Finally all I have to say is <code>God Bless IE Developers</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Debug Javscript In Production]]></title>
-    <link href="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/"/>
-    <updated>2013-03-31T17:39:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production</id>
-    <content type="html"><![CDATA[<p>Today I had great time sharing my experience on javascript debugging with the <a href="http://www.meetup.com/JavaScript-Ninjas-Bangalore/">javascript ninja community</a> at Bangalore</p>
-
-<p>Here is the presentation</p>
-
-<script async class="speakerdeck-embed" data-id="fc67d7b07c8701300a45123138156341" data-ratio="1.33333333333333" src="http://debuggify.github.com//speakerdeck.com/assets/embed.js"></script>
-
-
-
-
-<br/>
-
-
-<p>I will be explaining each point in details in the future posts.</p>
-
-<p>I know I have abandoned the blog for long time but not any more. Stay connected for more.</p>
-
-<p>Happy Debugging !!</p>
 ]]></content>
   </entry>
   
