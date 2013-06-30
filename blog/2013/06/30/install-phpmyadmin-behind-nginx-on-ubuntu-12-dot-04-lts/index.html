@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: IE8 - DEBUGGIFY</title>
+  <title>Install phpmyadmin behind nginx on ubuntu 12.04 LTS - DEBUGGIFY</title>
   <meta name="author" content="Debuggify">
 
   
-  <meta name="description" content="Category: IE8">
+  <meta name="description" content="Setup dependencies Setup Php, mysql &amp; phpmyadmin: sudo apt-get install php5-fpm php-apc mysql-server mysql-client phpmyadmin nginx Enter your &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://debuggify.github.comblog/categories/ie8/">
+  <link rel="canonical" href="http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,36 +80,202 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: IE8</h1>
+    
+      <h1 class="entry-title">Install Phpmyadmin Behind Nginx on Ubuntu 12.04 LTS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-30T12:40:00+05:30" pubdate data-updated="true">Jun 30<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><h2>Setup dependencies</h2>
 
-  
-  <h2>2013</h2>
+<p>Setup Php, mysql &amp; phpmyadmin:</p>
 
-<article>
-  
-<h1><a href="/blog/2013/06/22/error-in-javascript-comments/">Error in Javascript Comments</a></h1>
-<time datetime="2013-06-22T08:12:00+05:30" pubdate><span class='month'>Jun</span> <span class='day'>22</span> <span class='year'>2013</span></time>
+<pre><code>  sudo apt-get install php5-fpm php-apc mysql-server mysql-client phpmyadmin nginx
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ie6/'>IE6</a>, <a class='category' href='/blog/categories/ie7/'>IE7</a>, <a class='category' href='/blog/categories/ie8/'>IE8</a>, <a class='category' href='/blog/categories/ie9/'>IE9</a>, <a class='category' href='/blog/categories/comments/'>comments</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a></span>
-</footer>
+<p>Enter your MySQL password and phpmyadmin webinterface password when prompted</p>
 
+<p>Enable mysql extension by editing /etc/php5/fpm/php.ini</p>
 
-</article>
+<pre><code>sudo vim /etc/php5/fpm/php.ini
+</code></pre>
 
+<p>Add the following line and save</p>
+
+<pre><code>extension=mysql.so
+</code></pre>
+
+<p>Restart to use new config</p>
+
+<pre><code>  sudo /etc/init.d/php5-fpm restart
+  sudo /etc/init.d/nginx restart
+</code></pre>
+
+<h2>Setup Nginx config:</h2>
+
+<p>Next create a basic nginx vhost configuration in /etc/nginx/sites-available/ directory as follows:</p>
+
+<pre><code>sudo vim /etc/nginx/sites-available/phpmyadmin
+</code></pre>
+
+<p>And add the following:</p>
+
+<pre><code>server {
+
+       listen 80;
+       server_name admin.lvh.me lvh.me;
+       root /var/www/phpmyadmin;
+       if ($http_host != "admin.lvh.me") {
+                 rewrite ^ http://admin.lvh.me$request_uri permanent;
+       }
+       index index.php index.html;
+       location = /favicon.ico {
+                log_not_found off;
+                access_log off;
+       }
+       location = /robots.txt {
+                allow all;
+                log_not_found off;
+                access_log off;
+       }
+       # Make sure files with the following extensions do not get loaded by nginx because nginx would display the source code, and these files can contain PASSWORDS!
+        location ~* \.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|\.php_ {
+                deny all;
+        }
+       # Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
+       location ~ /\. {
+                deny all;
+                access_log off;
+                log_not_found off;
+       }
+       location ~*  \.(jpg|jpeg|png|gif|css|js|ico)$ {
+                expires max;
+                log_not_found off;
+       }
+       location ~ \.php$ {
+                try_files $uri =404;
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass 127.0.0.1:9000;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+       }
+
+       location /phpmyadmin {
+               root /usr/share/;
+               index index.php index.html index.htm;
+               location ~ ^/phpmyadmin/(.+\.php)$ {
+                       try_files $uri =404;
+                       root /usr/share/;
+                       fastcgi_pass 127.0.0.1:9000;
+                       fastcgi_index index.php;
+                       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                       include /etc/nginx/fastcgi_params;
+               }
+               location ~* ^/phpmyadmin/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+                       root /usr/share/;
+               }
+        }
+        location /phpMyAdmin {
+               rewrite ^/* /phpmyadmin last;
+        }
+}
+</code></pre>
+
+<p>To enable that vhost, we create a symlink to it from the /etc/nginx/sites-enabled/ directory:</p>
+
+<pre><code>cd /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
+</code></pre>
+
+<p>Reload nginx for the new configuration to take effect:</p>
+
+<pre><code>sudo /etc/init.d/nginx reload
+</code></pre>
+
+<p>Open the link in the browser <a href="http://admin.lvh.me/phpmyadmin">http://admin.lvh.me/phpmyadmin</a></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Ankur Agarwal</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-30T12:40:00+05:30" pubdate data-updated="true">Jun 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/12-04/'>12.04</a>, <a class='category' href='/blog/categories/fastcgi/'>fastcgi</a>, <a class='category' href='/blog/categories/lts/'>lts</a>, <a class='category' href='/blog/categories/mysql/'>mysql</a>, <a class='category' href='/blog/categories/nginx/'>nginx</a>, <a class='category' href='/blog/categories/phpmyadmin/'>phpmyadmin</a>, <a class='category' href='/blog/categories/precise/'>precise</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/" data-via="d3buggify" data-counturl="http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/22/error-in-javascript-comments/" title="Previous Post: Error in Javascript Comments">&laquo; Error in Javascript Comments</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -226,7 +392,10 @@
       var disqus_shortname = 'debuggify';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/';
+        var disqus_url = 'http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
