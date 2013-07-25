@@ -3,7 +3,7 @@ layout: post
 title: "Tracking jquery ajax errors and exceptions"
 date: 2013-07-25 4:44
 comments: true
-categories: ajax, debug, exceptions, errors, catch, track, cross origin, same origin
+categories: ajax debug exceptions errors catch track cross-origin same-origin
 published: true
 author: Ankur Agarwal
 ---
