@@ -3,7 +3,7 @@ layout: post
 title: "New API's to add custom data points"
 date: 2013-07-24 04:24
 comments: true
-categories: custom data, debugging, javascript, metadata
+categories: custom-data debugging javascript metadata
 published: true
 author: Ankur Agarwal
 ---
