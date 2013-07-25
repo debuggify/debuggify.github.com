@@ -9,7 +9,7 @@
   <meta name="author" content="Debuggify">
 
   
-  <meta name="description" content="Setup dependencies Setup Php, mysql &amp; phpmyadmin: sudo apt-get install php5-fpm php-apc mysql-server mysql-client phpmyadmin nginx Enter your &hellip;">
+  <meta name="description" content="In the past we have received many requests related to attach some custom data along with every messages collected. We have added this functionality, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +81,84 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/24/new-apis-to-add-custom-data-points/">New API&#8217;s to Add Custom Data Points</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-24T04:24:00+05:30" pubdate data-updated="true">Jul 24<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/07/24/new-apis-to-add-custom-data-points/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In the past we have received many requests related to attach some custom data along with every messages collected.</p>
+
+<p>We have added this functionality, and to simplify it, we have come with 3 new APIs</p>
+
+<h2>The Alias API</h2>
+
+<p>Using this api, its possible to set an alias to the unique user identification used by the debuggify. This make it easy to map a debuggify user identifier to your site username or email id. Remember the old data will not have alias.</p>
+
+<pre><code>debuggify.alias('foo@example.com');
+</code></pre>
+
+<p>Its pretty straight forward to use the above api.</p>
+
+<p><strong>Note</strong> Make sure every unique user should be given the one alias to avoid any data inconsistency.</p>
+
+<h2>The Metadata API</h2>
+
+<p>To attach custom data along with every message</p>
+
+<pre><code>debuggify.metadata({'login': true});
+</code></pre>
+
+<h2>The Attach API</h2>
+
+<p>To attach custom data along with a single message. This api need to be called on the logger object</p>
+
+<pre><code>var ajaxErrors = debuggify.Logger.get('ajax_errors');
+
+ajaxErrors.attach({
+  type: 'POST',
+  url: '/api/notification'
+});
+
+ajaxErrors.error('Error in Notification Api');
+</code></pre>
+
+<p>After calling attach, it must be followed by the one of the logging Apis like <code>.log</code>, <code>.error</code>, <code>.warn</code>, <code>.debug</code> or <code>.message</code> to push that data to the server.</p>
+
+<p><strong>Note</strong>: The attached data will expire after its once used by logging Api&#8217;s. To send data with every request use <code>.metadata</code> api</p>
+
+<p>We soon be adding use cases on how to use this APIs more powerfully.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -530,6 +608,10 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/24/new-apis-to-add-custom-data-points/">New API&#8217;s to add custom data points</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/">Install phpmyadmin behind nginx on ubuntu 12.04 LTS</a>
       </li>
     
@@ -543,10 +625,6 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
     
       <li class="post">
         <a href="/blog/2012/11/26/window-dot-onerror-is-not-enough/">Window.onerror is not enough</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/07/why-debuggify/">Why Debuggify?</a>
       </li>
     
   </ul>
