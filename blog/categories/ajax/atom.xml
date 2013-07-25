@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: exceptions, | DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/blog/categories/exceptions-/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ajax | DEBUGGIFY]]></title>
+  <link href="http://debuggify.github.com/blog/categories/ajax/atom.xml" rel="self"/>
   <link href="http://debuggify.github.com/"/>
-  <updated>2013-07-25T06:58:46+05:30</updated>
+  <updated>2013-07-25T07:12:36+05:30</updated>
   <id>http://debuggify.github.com/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
