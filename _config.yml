@@ -2,8 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://debuggify.github.com
+url: http://developers.debuggify.net
 title: DEBUGGIFY
+logo_title: debuggify
 subtitle: Debug the web
 author: Debuggify
 simple_search: http://google.com/search

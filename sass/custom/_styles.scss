@@ -1,2 +1,41 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+@font-face {
+  font-family: CoolVetica;
+  src: url('https://www.debuggify.net/assets/coolvetica/ot/coolvetica.otf');
+}
+
+#header {
+  padding: 0px !important;
+}
+
+#header_logo {
+  // text-align: center;
+  padding: 10px;
+
+  h1 {
+    // margin-left: -140px;
+    font-family: CoolVetica;
+    margin-top: -5px;
+    margin-bottom: -10px;
+
+    background: url("https://www.debuggify.net/assets/logo-white.png") no-repeat center 1px;
+    background-size: 38px;
+    // float: left;
+    height: 40px;
+    width: 40px;
+    color: #474d57;
+    // text-shadow: 0 1px 1px #FFF;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: normal;
+    // letter-spacing: -1px;
+    // text-indent: -9999px;
+
+    a {
+      padding-left: 38px;
+      font-size: 29px;
+    }
+  }
+
+}

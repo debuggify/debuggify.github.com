@@ -10,10 +10,10 @@ author: Ankur Agarwal
 
 The web had already shifted from static web pages to ajax driven websites for good. This shift have made the web awesome and faster but have introduced some new problems which need to taken care of . One of these is failed ajax requests. There are many reasons for a ajax request to fail, some of them are
 
-    - Api End points are down or unreachable
-    - Unauthorized / Invalid data requested
-    - Some error happened at the API back-end
-    - Edge cases are not handed properly in the code
+  - Api End points are down or unreachable
+  - Unauthorized / Invalid data requested
+  - Some error happened at the API back-end
+  - Edge cases are not handed properly in the code
 
 Normally the ajax pull data from self hosted as well 3rd party hosted APIs. In both cases, the failure of ajax request has to handled at both ends, but front end is more important because of its high impact on the user experience. In case of 3rd party APIs, there is any way no possibility to have control over back-end, so front-end is the default choice.
 
