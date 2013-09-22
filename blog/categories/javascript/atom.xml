@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: javascript | DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/blog/categories/javascript/atom.xml" rel="self"/>
-  <link href="http://debuggify.github.com/"/>
-  <updated>2013-07-25T07:20:03+05:30</updated>
-  <id>http://debuggify.github.com/</id>
+  <link href="http://developers.debuggify.net/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://developers.debuggify.net/"/>
+  <updated>2013-09-22T13:28:39+05:30</updated>
+  <id>http://developers.debuggify.net/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New API's to add custom data points]]></title>
-    <link href="http://debuggify.github.com/blog/2013/07/24/new-apis-to-add-custom-data-points/"/>
+    <link href="http://developers.debuggify.net/blog/2013/07/24/new-apis-to-add-custom-data-points/"/>
     <updated>2013-07-24T04:24:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/07/24/new-apis-to-add-custom-data-points</id>
+    <id>http://developers.debuggify.net/blog/2013/07/24/new-apis-to-add-custom-data-points</id>
     <content type="html"><![CDATA[<p>In the past we have received many requests related to attach some custom data along with every messages collected.</p>
 
 <p>We have added this functionality, and to simplify it, we have come with 3 new APIs</p>
@@ -56,7 +56,7 @@ ajaxErrors.error('Error in Notification Api');
 
 <p>After calling attach, it must be followed by the one of the logging Apis like <code>.log</code>, <code>.error</code>, <code>.warn</code>, <code>.debug</code> or <code>.message</code> to push that data to the server.</p>
 
-<p><strong>Note</strong>: The attached data will expire after its once used by logging Api's. To send data with every request use <code>.metadata</code> api</p>
+<p><strong>Note</strong>: The attached data will expire after its once used by logging Api&rsquo;s. To send data with every request use <code>.metadata</code> api</p>
 
 <p>We soon be adding use cases on how to use this APIs more powerfully.</p>
 ]]></content>
@@ -64,9 +64,9 @@ ajaxErrors.error('Error in Notification Api');
   
   <entry>
     <title type="html"><![CDATA[Error in Javascript Comments]]></title>
-    <link href="http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments/"/>
+    <link href="http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments/"/>
     <updated>2013-06-22T08:12:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments</id>
+    <id>http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments</id>
     <content type="html"><![CDATA[<p>Last week, I was writing code in javascript  when I found something that completly blew off my mind. This is what I found</p>
 
 <p><img src="/images/posts/stupid_ie.png" alt="Stupid IE" /></p>
@@ -115,14 +115,14 @@ ajaxErrors.error('Error in Notification Api');
   
   <entry>
     <title type="html"><![CDATA[Debug Javscript In Production]]></title>
-    <link href="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/"/>
+    <link href="http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/"/>
     <updated>2013-03-31T17:39:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production</id>
+    <id>http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production</id>
     <content type="html"><![CDATA[<p>Today I had great time sharing my experience on javascript debugging with the <a href="http://www.meetup.com/JavaScript-Ninjas-Bangalore/">javascript ninja community</a> at Bangalore</p>
 
 <p>Here is the presentation</p>
 
-<script async class="speakerdeck-embed" data-id="fc67d7b07c8701300a45123138156341" data-ratio="1.33333333333333" src="http://debuggify.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="fc67d7b07c8701300a45123138156341" data-ratio="1.33333333333333" src="http://developers.debuggify.net//speakerdeck.com/assets/embed.js"></script>
 
 
 

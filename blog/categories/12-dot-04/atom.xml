@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: mysql | DEBUGGIFY]]></title>
-  <link href="http://developers.debuggify.net/blog/categories/mysql/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 12.04 | DEBUGGIFY]]></title>
+  <link href="http://developers.debuggify.net/blog/categories/12-dot-04/atom.xml" rel="self"/>
   <link href="http://developers.debuggify.net/"/>
   <updated>2013-09-22T13:28:39+05:30</updated>
   <id>http://developers.debuggify.net/</id>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: IE7 | DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/blog/categories/ie7/atom.xml" rel="self"/>
-  <link href="http://debuggify.github.com/"/>
-  <updated>2013-07-25T07:20:03+05:30</updated>
-  <id>http://debuggify.github.com/</id>
+  <link href="http://developers.debuggify.net/blog/categories/ie7/atom.xml" rel="self"/>
+  <link href="http://developers.debuggify.net/"/>
+  <updated>2013-09-22T13:28:39+05:30</updated>
+  <id>http://developers.debuggify.net/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Error in Javascript Comments]]></title>
-    <link href="http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments/"/>
+    <link href="http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments/"/>
     <updated>2013-06-22T08:12:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments</id>
+    <id>http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments</id>
     <content type="html"><![CDATA[<p>Last week, I was writing code in javascript  when I found something that completly blew off my mind. This is what I found</p>
 
 <p><img src="/images/posts/stupid_ie.png" alt="Stupid IE" /></p>

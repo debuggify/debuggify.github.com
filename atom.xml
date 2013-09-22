@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/atom.xml" rel="self"/>
-  <link href="http://debuggify.github.com/"/>
-  <updated>2013-07-25T07:20:03+05:30</updated>
-  <id>http://debuggify.github.com/</id>
+  <link href="http://developers.debuggify.net/atom.xml" rel="self"/>
+  <link href="http://developers.debuggify.net/"/>
+  <updated>2013-09-22T13:28:39+05:30</updated>
+  <id>http://developers.debuggify.net/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
     
@@ -15,16 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Tracking jquery ajax errors and exceptions]]></title>
-    <link href="http://debuggify.github.com/blog/2013/07/25/tracking-jquery-ajax-errors-and-exceptions/"/>
+    <link href="http://developers.debuggify.net/blog/2013/07/25/tracking-jquery-ajax-errors-and-exceptions/"/>
     <updated>2013-07-25T04:44:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/07/25/tracking-jquery-ajax-errors-and-exceptions</id>
+    <id>http://developers.debuggify.net/blog/2013/07/25/tracking-jquery-ajax-errors-and-exceptions</id>
     <content type="html"><![CDATA[<p>The web had already shifted from static web pages to ajax driven websites for good. This shift have made the web awesome and faster but have introduced some new problems which need to taken care of . One of these is failed ajax requests. There are many reasons for a ajax request to fail, some of them are</p>
 
-<pre><code>- Api End points are down or unreachable
-- Unauthorized / Invalid data requested
-- Some error happened at the API back-end
-- Edge cases are not handed properly in the code
-</code></pre>
+<ul>
+<li>Api End points are down or unreachable</li>
+<li>Unauthorized / Invalid data requested</li>
+<li>Some error happened at the API back-end</li>
+<li>Edge cases are not handed properly in the code</li>
+</ul>
+
 
 <p>Normally the ajax pull data from self hosted as well 3rd party hosted APIs. In both cases, the failure of ajax request has to handled at both ends, but front end is more important because of its high impact on the user experience. In case of 3rd party APIs, there is any way no possibility to have control over back-end, so front-end is the default choice.</p>
 
@@ -127,9 +129,9 @@
   
   <entry>
     <title type="html"><![CDATA[New API's to add custom data points]]></title>
-    <link href="http://debuggify.github.com/blog/2013/07/24/new-apis-to-add-custom-data-points/"/>
+    <link href="http://developers.debuggify.net/blog/2013/07/24/new-apis-to-add-custom-data-points/"/>
     <updated>2013-07-24T04:24:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/07/24/new-apis-to-add-custom-data-points</id>
+    <id>http://developers.debuggify.net/blog/2013/07/24/new-apis-to-add-custom-data-points</id>
     <content type="html"><![CDATA[<p>In the past we have received many requests related to attach some custom data along with every messages collected.</p>
 
 <p>We have added this functionality, and to simplify it, we have come with 3 new APIs</p>
@@ -168,7 +170,7 @@ ajaxErrors.error('Error in Notification Api');
 
 <p>After calling attach, it must be followed by the one of the logging Apis like <code>.log</code>, <code>.error</code>, <code>.warn</code>, <code>.debug</code> or <code>.message</code> to push that data to the server.</p>
 
-<p><strong>Note</strong>: The attached data will expire after its once used by logging Api&#8217;s. To send data with every request use <code>.metadata</code> api</p>
+<p><strong>Note</strong>: The attached data will expire after its once used by logging Api&rsquo;s. To send data with every request use <code>.metadata</code> api</p>
 
 <p>We soon be adding use cases on how to use this APIs more powerfully.</p>
 ]]></content>
@@ -176,9 +178,9 @@ ajaxErrors.error('Error in Notification Api');
   
   <entry>
     <title type="html"><![CDATA[Install phpmyadmin behind nginx on ubuntu 12.04 LTS]]></title>
-    <link href="http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/"/>
+    <link href="http://developers.debuggify.net/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/"/>
     <updated>2013-06-30T12:40:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts</id>
+    <id>http://developers.debuggify.net/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts</id>
     <content type="html"><![CDATA[<h2>Setup dependencies</h2>
 
 <p>Setup Php, mysql &amp; phpmyadmin:</p>
@@ -290,12 +292,12 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
   
   <entry>
     <title type="html"><![CDATA[Error in Javascript Comments]]></title>
-    <link href="http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments/"/>
+    <link href="http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments/"/>
     <updated>2013-06-22T08:12:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/06/22/error-in-javascript-comments</id>
+    <id>http://developers.debuggify.net/blog/2013/06/22/error-in-javascript-comments</id>
     <content type="html"><![CDATA[<p>Last week, I was writing code in javascript  when I found something that completly blew off my mind. This is what I found</p>
 
-<p><img src="http://debuggify.github.com/images/posts/stupid_ie.png" alt="Stupid IE" /></p>
+<p><img src="http://developers.debuggify.net/images/posts/stupid_ie.png" alt="Stupid IE" /></p>
 
 <p>Yeah, IE thowing error in javascript comment. For some time I didnot believe what I am seeing, but gradually I came to my senses. Like most developers, first thing I did was started cursing IE on twitter, but later reality struct me and that is to find a solution to this mess.</p>
 
@@ -341,14 +343,14 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
   
   <entry>
     <title type="html"><![CDATA[Debug Javscript In Production]]></title>
-    <link href="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/"/>
+    <link href="http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/"/>
     <updated>2013-03-31T17:39:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production</id>
+    <id>http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production</id>
     <content type="html"><![CDATA[<p>Today I had great time sharing my experience on javascript debugging with the <a href="http://www.meetup.com/JavaScript-Ninjas-Bangalore/">javascript ninja community</a> at Bangalore</p>
 
 <p>Here is the presentation</p>
 
-<script async class="speakerdeck-embed" data-id="fc67d7b07c8701300a45123138156341" data-ratio="1.33333333333333" src="http://debuggify.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="fc67d7b07c8701300a45123138156341" data-ratio="1.33333333333333" src="http://developers.debuggify.net//speakerdeck.com/assets/embed.js"></script>
 
 
 
@@ -366,9 +368,9 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
   
   <entry>
     <title type="html"><![CDATA[Window.onerror is not enough]]></title>
-    <link href="http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough/"/>
+    <link href="http://developers.debuggify.net/blog/2012/11/26/window-dot-onerror-is-not-enough/"/>
     <updated>2012-11-26T13:18:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2012/11/26/window-dot-onerror-is-not-enough</id>
+    <id>http://developers.debuggify.net/blog/2012/11/26/window-dot-onerror-is-not-enough</id>
     <content type="html"><![CDATA[<p>Scott Hanselman blogged about <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx">JavaScript the assembly language for the web</a>. There a plenty of <a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">languages that compiles to javascript</a>. With the addition of Dart from Google and Typescript from Microsoft a war has broke out for better.</p>
 
 <p>With the rise of compiled to javascript languages it hard to traceback the errors to original source. Almost all modern provides the window.onerror api to catch all uncaught exceptions on a page. This api provides very limited information (error message, filename and line number only) which is the root cause of many problems.</p>
@@ -378,7 +380,7 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 <ul>
 <li><p>Missing Char No: The char no is very important for the minified code to point at the exact statement as there is only one line in minified code. Even source maps cannot be helpful in tracking back to original line.</p></li>
 <li><p>No Call Stack: The call stack is completely hidden from the developer so its hard to identify the functions flow. However there is a trick to <a href="http://blog.errorception.com/2011/12/call-stacks-in-ie.html">extract stack in IE9</a> only.</p></li>
-<li><p>Cross Origin Errors: These types are thown when some cross origin permission is broken. They are very common on pages with facebook like and google plus widget installed. For such errors window.error message throw a single message &#8220;Script Error&#8221;. As per <a href="http://stackoverflow.com/questions/5913978/cryptic-script-error-reported-in-javascript-n-chrome-and-firefox/7778424#7778424">stackoverflow</a> post this behavior is intentional to avoid some security risks but its at expense of useful debugging information.</p></li>
+<li><p>Cross Origin Errors: These types are thown when some cross origin permission is broken. They are very common on pages with facebook like and google plus widget installed. For such errors window.error message throw a single message &ldquo;Script Error&rdquo;. As per <a href="http://stackoverflow.com/questions/5913978/cryptic-script-error-reported-in-javascript-n-chrome-and-firefox/7778424#7778424">stackoverflow</a> post this behavior is intentional to avoid some security risks but its at expense of useful debugging information.</p></li>
 </ul>
 
 
@@ -390,9 +392,9 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
   
   <entry>
     <title type="html"><![CDATA[Why Debuggify?]]></title>
-    <link href="http://debuggify.github.com/blog/2012/08/07/why-debuggify/"/>
+    <link href="http://developers.debuggify.net/blog/2012/08/07/why-debuggify/"/>
     <updated>2012-08-07T12:10:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2012/08/07/why-debuggify</id>
+    <id>http://developers.debuggify.net/blog/2012/08/07/why-debuggify</id>
     <content type="html"><![CDATA[<h2>Who am I?</h2>
 
 <p>I was born 6 years back when I bought my first computer and a internet connection. To be frank, Internet is a second home to me. For most of people out there who feel same, are continuously trying to make <strong>Internet a better place</strong>.</p>
@@ -403,7 +405,7 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 
 <p>I am a full stack web developer by profession and have authored / co-authored many 3rd party social plugins for <a href="http://www.shareaholic.com/publishers">Shareaholic Inc</a> which runs on thousands of different blogs and websites driving 1+ billion pageviews per month. These plugins can be installed on different CMS/blogging platform like Wordpress, Drupal, Tumblr, Blogger etc. While working on these plugins I closely interact with the different elements of the modern internet ecosystem.</p>
 
-<h2>What&#8217;s my use case of 3rd party plugin ?</h2>
+<h2>What&rsquo;s my use case of 3rd party plugin ?</h2>
 
 <blockquote><p>A 3rd party plugin has to be <strong>robust</strong> enough to work in <strong>3rd party environments</strong> while interacting with <strong>3rd party apis</strong> and support every <strong>major browser vendor</strong> out there</p></blockquote>
 
@@ -415,7 +417,7 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 <li>It should <code>not conflict</code> with other existing plugins</li>
 <li>It should <code>support major browser vendors</code> including internet explorer</li>
 <li>It should also <code>support legacy browser versions</code> like ie6 ie7 etc.</li>
-<li>As plugins interact with over 200+ 3rd party apis, it&#8217;s hard to keep track when something break</li>
+<li>As plugins interact with over 200+ 3rd party apis, it&rsquo;s hard to keep track when something break</li>
 <li>It should be easy to setup with multiple cms/blogging environments for better distribution</li>
 </ul>
 
@@ -423,11 +425,11 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 <h2>Technical challenges faced ?</h2>
 
 <ul>
-<li>In 3rd party environment, developers have limited or no control over things, so it&#8217;s hard to debug and reproduce bugs / issues</li>
+<li>In 3rd party environment, developers have limited or no control over things, so it&rsquo;s hard to debug and reproduce bugs / issues</li>
 <li>If some plugin feature is not working its hard to know whether
 
 <ul>
-<li>it&#8217;s not working for a particular website,</li>
+<li>it&rsquo;s not working for a particular website,</li>
 <li>or not working for a set of URLs</li>
 <li>or for a particular CMS/Blogging environment</li>
 <li>or for a particular screen resolution</li>
@@ -437,8 +439,8 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 </ul>
 </li>
 <li>Its hard to judge the impact of every release, whether it fixed the problem or introduced some new side effects</li>
-<li>The 3rd party API&#8217;s are continuously changing, upgrading &amp; depreciating.  Companies like Facebook, Google, Twitter are continuously bashing developers with bleeding edges of their API&#8217;s</li>
-<li>With HTML5, ES Harmony and CSS3,  browsers are evolving faster than ever, so they are also releasing bleeding edge features and API&#8217;s</li>
+<li>The 3rd party API&rsquo;s are continuously changing, upgrading &amp; depreciating.  Companies like Facebook, Google, Twitter are continuously bashing developers with bleeding edges of their API&rsquo;s</li>
+<li>With HTML5, ES Harmony and CSS3,  browsers are evolving faster than ever, so they are also releasing bleeding edge features and API&rsquo;s</li>
 </ul>
 
 
@@ -458,7 +460,7 @@ sudo ln -s /etc/nginx/sites-available/phpmyadmin phpmyadmin
 
 <blockquote><p>Developers are the keepers of the modern internet.</p></blockquote>
 
-<p>The web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, it&#8217;s going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make <strong>Internet a better place</strong></p>
+<p>The web is evolving because of the developers. There are around 1+ million developers on the planet. I can build something that make developers more productive and can save up to 1hr/day of their time, it&rsquo;s going to be revolutionary. Developers can reinvest this time in open source projects, new innovations or anything that eventually make <strong>Internet a better place</strong></p>
 
 <p>So that is Debuggify is all about. Contact me if you want to join me on my quest.</p>
 ]]></content>

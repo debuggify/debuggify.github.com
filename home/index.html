@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://debuggify.github.com/home/">
+  <link rel="canonical" href="http://developers.debuggify.net/home/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -46,9 +46,10 @@
 </head>
 
 <body   >
-  <header role="banner"><hgroup style="height: 55px">
+  <header id="header" role="banner"><hgroup id="header_logo">
+  <h1><a href="/">debuggify</a></h1>
   <!-- <h1><a href="/">DEBUGGIFY</a></h1> -->
-  <h1><a href="/"><img src="/images/icons/debuggify-logo.png" style=""></a></h1>
+  <!-- <h1><a href="/"><img src="/images/icons/debuggify-logo.png" style=""></a></h1> -->
 
   
     <!-- <h2>Debug the web</h2> -->
@@ -63,7 +64,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:debuggify.github.com" />
+    <input type="hidden" name="q" value="site:developers.debuggify.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -171,7 +172,7 @@
 
 <p>This will run a server on default port <code>9999</code></p>
 
-<p>Open http://dashboard.debuggify.net in browser. Go to any page and click on the bookmarket. Now open the browser console run commands</p>
+<p>Open <a href="http://dashboard.debuggify.net">http://dashboard.debuggify.net</a> in browser. Go to any page and click on the bookmarket. Now open the browser console run commands</p>
 
 <pre><code>console.log('I love debugging')
 console.error('I hate bugs');
@@ -286,7 +287,7 @@ This is very powerful can be used it to change configuration for particular modu
 <pre><code>debuggify.Logger.get(project1,true)
 </code></pre>
 
-<p>Send message for specific type(logs,error,warning).Following will change the error message for module module1 to &#8220;This is an error message&#8221;.</p>
+<p>Send message for specific type(logs,error,warning).Following will change the error message for module module1 to &ldquo;This is an error message&rdquo;.</p>
 
 <pre><code>project1.message("This is an error message", module1, error)
 </code></pre>
@@ -335,7 +336,7 @@ This is very powerful can be used it to change configuration for particular modu
       
         <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://debuggify.github.com/home/index.html" data-via="d3buggify" data-counturl="http://debuggify.github.com/home/index.html" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://developers.debuggify.net/home/index.html" data-via="d3buggify" data-counturl="http://developers.debuggify.net/home/index.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -411,40 +412,7 @@ This is very powerful can be used it to change configuration for particular modu
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("d3buggify", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/d3buggify" class="twitter-follow-button" data-show-count="false">Follow @d3buggify</a>
-  
-</section>
 
-
-
-
-
-<section>
-  <h1>IRC</h1>
-  <ul id="irc">
-    <li>Server: irc.freenode.net</li>
-    <li>Port: 6667</li>
-    <li>Room: #debuggify</li>
-  </ul>
-</section>
-<section>
-  <h1>Mailing List</h1>
-  <ul id="mailing_list">
-    <li>debuggify@googlegroups.com</li>
-  </ul>
-</section>
 
 
   

@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/">
+  <link rel="canonical" href="http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -46,9 +46,10 @@
 </head>
 
 <body   >
-  <header role="banner"><hgroup style="height: 55px">
+  <header id="header" role="banner"><hgroup id="header_logo">
+  <h1><a href="/">debuggify</a></h1>
   <!-- <h1><a href="/">DEBUGGIFY</a></h1> -->
-  <h1><a href="/"><img src="/images/icons/debuggify-logo.png" style=""></a></h1>
+  <!-- <h1><a href="/"><img src="/images/icons/debuggify-logo.png" style=""></a></h1> -->
 
   
     <!-- <h2>Debug the web</h2> -->
@@ -63,7 +64,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:debuggify.github.com" />
+    <input type="hidden" name="q" value="site:developers.debuggify.net" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -162,7 +163,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/" data-via="d3buggify" data-counturl="http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/" data-via="d3buggify" data-counturl="http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -251,40 +252,7 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("d3buggify", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/d3buggify" class="twitter-follow-button" data-show-count="false">Follow @d3buggify</a>
-  
-</section>
 
-
-
-
-
-<section>
-  <h1>IRC</h1>
-  <ul id="irc">
-    <li>Server: irc.freenode.net</li>
-    <li>Port: 6667</li>
-    <li>Room: #debuggify</li>
-  </ul>
-</section>
-<section>
-  <h1>Mailing List</h1>
-  <ul id="mailing_list">
-    <li>debuggify@googlegroups.com</li>
-  </ul>
-</section>
 
 
   
@@ -306,8 +274,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/';
-        var disqus_url = 'http://debuggify.github.com/blog/2013/03/31/debug-javascript-in-production/';
+        var disqus_identifier = 'http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/';
+        var disqus_url = 'http://developers.debuggify.net/blog/2013/03/31/debug-javascript-in-production/';
         var disqus_script = 'embed.js';
       
     (function () {

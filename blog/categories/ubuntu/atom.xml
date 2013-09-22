@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ubuntu | DEBUGGIFY]]></title>
-  <link href="http://debuggify.github.com/blog/categories/ubuntu/atom.xml" rel="self"/>
-  <link href="http://debuggify.github.com/"/>
-  <updated>2013-07-25T07:20:03+05:30</updated>
-  <id>http://debuggify.github.com/</id>
+  <link href="http://developers.debuggify.net/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://developers.debuggify.net/"/>
+  <updated>2013-09-22T13:28:39+05:30</updated>
+  <id>http://developers.debuggify.net/</id>
   <author>
     <name><![CDATA[Debuggify]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Install phpmyadmin behind nginx on ubuntu 12.04 LTS]]></title>
-    <link href="http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/"/>
+    <link href="http://developers.debuggify.net/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts/"/>
     <updated>2013-06-30T12:40:00+05:30</updated>
-    <id>http://debuggify.github.com/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts</id>
+    <id>http://developers.debuggify.net/blog/2013/06/30/install-phpmyadmin-behind-nginx-on-ubuntu-12-dot-04-lts</id>
     <content type="html"><![CDATA[<h2>Setup dependencies</h2>
 
 <p>Setup Php, mysql &amp; phpmyadmin:</p>
